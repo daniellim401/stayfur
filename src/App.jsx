@@ -1,9 +1,23 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import Navbar from "./components/Navbar";
+import AboutPage from "./pages/AboutPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
 
 function App() {
   return (
-    <div>
-      <h1 className='text-1xl font-bold'>Hello World</h1>
+    <div className="min-h-screen bg-gray-100">
+      <Router>
+        {/* Navbar Component */}
+        <Navbar />
+
+        {/* Routes */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/create" element={<AboutPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
