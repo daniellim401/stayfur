@@ -1,8 +1,19 @@
-
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/StayFur.png';
+import LoginPopup from '../pages/LoginPopup';
 
 export default function Example() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openLoginPopup = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeLoginPopup = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <header className="bg-[#B46B42] shadow-sm shadow-black ">
       <nav className=" flex items-center p-2">
@@ -35,13 +46,32 @@ export default function Example() {
               Contact
             </Link>
           </text>
-          <button className="bg-black text-white font-medium py-2 px-4 rounded-lg hover:bg-gray-50 hover:text-black">
-            <Link to="/login">
-              Login/Signup
-            </Link>
-          </button>
+        {/* Login / Sign Up Button */}
+          <button
+          className="bg-black text-white font-medium py-2 px-4 rounded-lg hover:bg-gray-50 hover:text-black"
+          onClick={openLoginPopup}>
+              Login / Signup
+          </button>         
         </div>
       </nav>
+
+        {/* Login pop up */}    
+        {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative">
+            {/* Close Button */}
+            <button
+              onClick={closeLoginPopup}
+              className="absolute top-3 right-3 text-gray-500 hover:text-black"
+            >
+              &#x2715;
+            </button>
+
+            {/* Render the LoginPage */}
+            <LoginPopup closeLoginPopup={closeLoginPopup} />
+          </div>
+        </div>
+      )}  
     </header>
   );
 }
