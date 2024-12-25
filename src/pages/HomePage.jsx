@@ -22,7 +22,7 @@ const HomePage = () => {
            p-8 rounded-lg shadow-lg max-w-5xl w-full mx-5 min-h-[300px]">
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
               <div className="col-span-5 lg:col-span-1">
-                <label className="block text-sm font-bold text-black">Location</label>
+                <label className="block text-lg font-bold text-black">Location</label>
                 <input
                   type="text"
                   placeholder="Address"
@@ -31,14 +31,14 @@ const HomePage = () => {
               </div>
               <div className="col-span-5 lg:col-span-2 grid grid-cols-2 gap-2">
                 <div>
-                  <label className="block text-sm font-bold text-black">Drop off</label>
+                  <label className="block text-lg font-bold text-black">Drop off</label>
                   <input
                     type="date"
                     className="block w-full mt-1 p-2 border rounded-lg"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-bold text-black">Pick up</label>
+                  <label className="block text-lg font-bold text-black">Pick up</label>
                   <input
                     type="date"
                     className="block w-full mt-1 p-2 border rounded-lg"
@@ -46,7 +46,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="col-span-5 lg:col-span-1">
-                <label className="block text-sm font-bold text-black">Pax</label>
+                <label className="block text-lg font-bold text-black">Pax</label>
                 <div className="flex items-center mt-1">
                   <button
                     onClick={() => setPetsCount(Math.max(1, petsCount - 1))}
@@ -69,7 +69,7 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="col-span-5 lg:col-span-1">
-                <label className="block text-sm font-bold text-black">Type</label>
+                <label className="block text-lg font-bold text-black">Type</label>
                 <select className="block w-full mt-1 p-2 border rounded-lg">
                   <option value="cat">Cat</option>
                   <option value="dog">Dog</option>
