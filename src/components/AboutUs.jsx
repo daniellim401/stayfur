@@ -5,9 +5,11 @@ const AboutUs = () => {
     <main>
       <div className="relative bg-white">
         <div className="relative mx-auto max-w-7xl px-4 lg:px-4 py-2">
-          <div className="grid lg:grid-cols-2 gap-8">
-            <div className="lg:max-w-lg space-y-6">
-              <h1 className="text-6xl font-extrabold text-black">Our Story</h1>
+          <div className="grid lg:grid-cols-2 gap-8 relative">
+            <div className="lg:max-w-lg space-y-6 relative z-10">
+              <h1 className="text-6xl font-extrabold text-black">
+                Our<br />Story
+              </h1>
               <p className="text-xl text-gray-600">
                 Find the pawfect getaway for your pets while you're on vacation
                 <br /> — where comfort and care come first
@@ -37,12 +39,11 @@ const AboutUs = () => {
               </button>
             </div>
 
-            {/* 图片部分 */}
-            <div>
+            <div className="relative lg:flex lg:items-center">
               <img
                 src={Image}
                 alt="Cat and Dog"
-                className="object-cover w-full h-full rounded-lg opacity-60"
+                className="object-cover w-full h-full opacity-60"
               />
             </div>
           </div>
@@ -53,4 +54,3 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
-

@@ -1,5 +1,3 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 import AboutUs from '../components/AboutUs';
 
@@ -12,7 +10,7 @@ const AboutPage = () => {
       const rect = firstSection.getBoundingClientRect();
 
       if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        setIsSecondVisible(true); // 第二个内容出现
+        setIsSecondVisible(true); 
       }
     };
 
@@ -28,7 +26,6 @@ const AboutPage = () => {
       {/* About us content */}
       <AboutUs />
 
-      {/* 第二个内容 */}
       <div
         id="second-section"
         className={`bg-white py-24 sm:py-32 transform transition-opacity duration-1000 ${isSecondVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'

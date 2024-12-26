@@ -1,5 +1,3 @@
-'use client';
-
 export default function ContactCard({ onClose }) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
