@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import ChatPopup from "./components/ChatPopup.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>
+        <ChatPopup />
       </Router>
     </div>
   );
