@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import AboutPage from "./pages/AboutPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ChatPopup from "./components/ChatPopup.jsx";
+import NoResults from "./pages/NoResultPage.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/no-results" element={<NoResults/>}/>
         </Routes>
         <ChatPopup />
       </Router>
