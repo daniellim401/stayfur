@@ -6,6 +6,8 @@ import AboutPage from "./pages/AboutPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import ChatPopup from "./components/ChatPopup.jsx";
 import NoResults from "./pages/NoResultPage.jsx";
+import FoundPage from "./pages/FoundPage.jsx";
+import HotelPage from "./pages/HotelPage.jsx";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/no-results" element={<NoResults/>}/>
+          <Route path="/found" element={<FoundPage/>}/>
+          <Route path="/hotel" element={<HotelPage/>}/>  
         </Routes>
         <ChatPopup />
       </Router>
