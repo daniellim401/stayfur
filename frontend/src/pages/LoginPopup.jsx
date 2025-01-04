@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginPopup = ({ closeLoginPopup }) => {
   return (
@@ -7,7 +8,9 @@ const LoginPopup = ({ closeLoginPopup }) => {
       <p className="text-sm text-gray-600 mb-6">
         Don’t have an account?{" "}
         <span className="text-[#B46B42] cursor-pointer font-medium">
-          Sign Up
+          <Link to="/signup" onClick={closeLoginPopup}>
+            Sign Up
+          </Link>
         </span>
       </p>
 
